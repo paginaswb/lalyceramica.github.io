@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝓛𝓪𝓵𝔂 𝓬𝓮𝓻𝓪𝓶𝓲𝓬𝓪</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-image: url('1735267330142.png_image.png');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        header img {
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin: 0;
+            text-transform: uppercase;
+            font-family: 'Georgia', serif;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-section {
+            padding: 40px 20px;
+            text-align: center;
+            background-image: url('fondo grande(2).jpeg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .product-section h2 {
+            margin-bottom: 30px;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .product-card {
+            background: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-card h3 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .product-card p {
+            color: #555;
+            font-size: 14px;
+            padding: 0 10px;
+        }
+
+        .product-card ul {
+            text-align: left;
+            padding: 0 20px;
+            color: #555;
+            font-size: 14px;
+        }
+
+        .product-card button {
+            background-color: #e65100;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            margin: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .product-card button:hover {
+            background-color: #d84315;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        .cart {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #e65100;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .cart:hover {
+            background-color: #d84315;
+        }
+
+        .cart-content {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: none;
+            width: 250px;
+        }
+
+        .cart-content h3 {
+            margin: 0;
+        }
+
+        .cart-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .cart-content li {
+            margin: 5px 0;
+        }
+
+        .cart-content button {
+            background-color: #e65100;
+            border: none;
+            color: white;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .cart-content button:hover {
+            background-color: #d84315;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="descarga__1_-removebg-preview.png" alt="Logo Lalÿ Cerámica">
+        <h1>𝓛𝓪𝓵𝔂 𝓬𝓮𝓻𝓪𝓶𝓲𝓬𝓪</h1>
+        <p class="highlight">¡Donde la creatividad se convierte en arte!</p>
+        <p>Decoraciones en cerámica | Macetas personalizadas | Cerámica en blanco</p>
+    </header>
+
+    <section class="product-section">
+        <h2>Nuestros Productos</h2>
+        <div class="products">
+            <div class="product-card">
+                <img src="fotoalcancia.jpg" alt="Alcancía para niños">
+                <h3>Alcancía para niños</h3>
+                <p>Descubre la magia del ahorro con nuestra divertida alcancía para niños.</p>
+                <ul>
+                    <li>Material: Cerámica</li>
+                    <li>Los 2 cuestan: $5.00</li>
+                    <li>Cada uno: $2.50</li>
+                    <li>Alto: 17cm</li>
+                    <li>Ancho: 11cm</li>
+                </ul>
+                <button onclick="addToCart('Alcancía para niños')">Agregar al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="fotomaceta.jpeg" alt="Macetas">
+                <h3>Macetas</h3>
+                <p>Agrega un toque de estilo a tu hogar con nuestras macetas elegantes.</p>
+                <ul>
+                    <li>Material: Cerámica</li>
+                    <li>Colores disponibles: Blanco, terracota</li>
+                    <li>Altura: 15cm</li>
+                    <li>Diámetro: 12cm</li>
+                </ul>
+                <button onclick="addToCart('Macetas')">Agregar al carrito</button>
+            </div>
+
+            <div class="product-card">
+                <img src="fotochancho.png" alt="Alcancía para recuerdos">
+                <h3>Alcancía para recuerdos</h3>
+                <p>Regala una alcancía en forma de puerquito para ocasiones especiales.</p>
+                <ul>
+                    <li>Material: Cerámica</li>
+                    <li>Colores personalizables</li>
+                    <li>Tamaño: Mediano</li>
+                </ul>
+                <button onclick="addToCart('Alcancía para recuerdos')">Agregar al carrito</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Lalÿ Cerámica. Todos los derechos reservados.</p>
+    </footer>
+
+    <div class="cart" onclick="toggleCart()">Ver carrito</div>
+    <div class="cart-content" id="cartContent">
+        <h3>Carrito de compras</h3>
+        <ul id="cartItems"></ul>
+        <button onclick="clearCart()">Vaciar carrito</button>
+    </div>
+
+    <script>
+        const cart = [];
+
+        function addToCart(product) {
+            cart.push(product);
+            updateCart();
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItemsElement = document.getElementById('cartItems');
+            cartItemsElement.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItemsElement.innerHTML = '<li>Tu carrito está vacío.</li>';
+                return;
+            }
+
+            cart.forEach((product, index) => {
+                const cartItem = document.createElement('li');
+                cartItem.textContent = product;
+
+                const removeButton = document.createElement('button');
+                removeButton.textContent = 'Eliminar';
+                removeButton.onclick = () => removeFromCart(index);
+                cartItem.appendChild(removeButton);
+
+                cartItemsElement.appendChild(cartItem);
+            });
+        }
+
+        function toggleCart() {
+            const cartContent = document.getElementById('cartContent');
+            cartContent.style.display = cartContent.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function clearCart() {
+            cart.length = 0;
+            updateCart();
+            toggleCart();
+        }
+    </script>
+</body>
+</html>
